@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b4bdb">
+  <title>Bab 1 – Aku yang Unik | Komik Interaktif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">UPT SDN 160 GRESIK · BAHASA INDONESIA KELAS 5</p>
+      <h1>📚 BAB 1 – AKU YANG UNIK</h1>
+      <p class="subtitle">Petualangan di Negeri Benda Unik</p>
+      <p class="intro">Baca komiknya, dengarkan ceritanya, lalu jawab tantangannya!</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="comic-card" aria-labelledby="comic-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">HALAMAN 1</p>
+          <h2 id="comic-heading">Gerbang Negeri Benda Unik</h2>
+        </div>
+        <span class="pill">🪄 Petualangan dimulai</span>
+      </div>
+
+      <div class="image-frame">
+        <div id="imageLoading" class="image-message">Sedang memuat gambar komik…</div>
+        <img id="comicImage"
+             src="https://raw.githubusercontent.com/sdn160gresik/komik/main/bhsi/bab1/gambar1.png"
+             alt="Ilustrasi komik BAB 1 – Aku yang Unik, halaman 1"
+             fetchpriority="high">
+        <div id="imageError" class="image-message error" hidden>
+          <strong>Gambar belum dapat dimuat.</strong>
+          <span>Periksa koneksi internet atau buka tautan gambar GitHub.</span>
+          <a href="https://raw.githubusercontent.com/sdn160gresik/komik/main/bhsi/bab1/gambar1.png" target="_blank" rel="noopener">Buka gambar sumber ↗</a>
+        </div>
+      </div>
+      <p class="image-note">Gambar ditampilkan dari GitHub dalam proporsi aslinya. Ilustrasi tidak dipotong atau digambar ulang.</p>
+
+      <section class="audio-card" aria-labelledby="audio-heading">
+        <div class="audio-top">
+          <div>
+            <p class="eyebrow">DENGARKAN CERITA</p>
+            <h2 id="audio-heading">🔊 Menu Suara</h2>
+          </div>
+          <button id="menuToggle" class="primary-button" aria-expanded="false" aria-controls="audioMenu">🔊 MENU SUARA <span id="menuChevron">▾</span></button>
+        </div>
+
+        <div id="audioMenu" class="audio-menu" hidden>
+          <p class="menu-help">Pilih bagian yang ingin didengarkan. Audio yang sedang berjalan akan dihentikan saat Anda memilih bagian lain.</p>
+          <div class="audio-options">
+            <button class="audio-option" data-audio="narrator">🎙️ <span><strong>Narator</strong><small>Pembukaan petualangan</small></span></button>
+            <button class="audio-option" data-audio="kamusi">📘 <span><strong>Dialog Kamusi</strong><small>Ajakan memulai belajar</small></span></button>
+            <button class="audio-option" data-audio="pensi">✏️ <span><strong>Dialog Pensi</strong><small>Semangat menghadapi tantangan</small></span></button>
+            <button class="audio-option" data-audio="challenge">🌟 <span><strong>Tantangan Siswa</strong><small>Dengarkan pertanyaan</small></span></button>
+            <button class="audio-option all-option" data-audio="all">▶️ <span><strong>Putar Semua Audio</strong><small>Putar empat bagian secara berurutan</small></span></button>
+          </div>
+          <div class="playback-controls">
+            <button id="pauseButton" class="control-button">⏸️ Jeda Audio</button>
+            <button id="resumeButton" class="control-button">▶️ Lanjutkan Audio</button>
+            <button id="stopButton" class="control-button">⏹️ Hentikan Audio</button>
+            <button id="repeatButton" class="control-button">🔁 Ulangi Audio Terakhir</button>
+          </div>
+        </div>
+
+        <div class="status-row" role="status" aria-live="polite">
+          <span id="statusIcon" class="status-icon">🔈</span>
+          <div><strong id="audioStatus">Audio siap</strong><p id="audioDetail">Pilih MENU SUARA untuk mulai mendengarkan.</p></div>
+        </div>
+
+        <div id="transcriptPanel" class="transcript" aria-live="polite">
+          <span class="transcript-label">TEKS AUDIO</span>
+          <h3 id="transcriptTitle">Cerita akan tampil di sini</h3>
+          <p id="transcriptText">Pilih Narator, Kamusi, Pensi, atau Tantangan Siswa dari menu suara.</p>
+        </div>
+        <p class="voice-note">Catatan: karakter suara menggunakan suara sintetis yang tersedia di perangkat. Perbedaan suara bergantung pada dukungan browser; bukan rekaman suara manusia.</p>
+      </section>
+    </section>
+
+    <section class="challenge-card" aria-labelledby="challenge-heading">
+      <div class="challenge-title">
+        <span class="challenge-icon">🌟</span>
+        <div><p class="eyebrow">SAATNYA BERPIKIR</p><h2 id="challenge-heading">Tantangan Siswa</h2></div>
+      </div>
+      <p class="question">Apa yang dimaksud dengan keunikan? Tuliskan satu contoh keunikan yang kamu miliki.</p>
+      <label for="studentAnswer">Jawabanku</label>
+      <textarea id="studentAnswer" rows="5" placeholder="Tuliskan jawabanmu di sini…" maxlength="3000"></textarea>
+      <div class="answer-actions">
+        <button id="saveAnswer" class="primary-button">💾 Simpan Jawaban</button>
+        <button id="deleteAnswer" class="danger-button">🗑️ Hapus Jawaban</button>
+      </div>
+      <p id="saveStatus" class="save-status" role="status" aria-live="polite">Jawaban disimpan hanya di perangkat ini dan tidak otomatis dikirim kepada guru.</p>
+    </section>
+
+    <footer>
+      <p>✨ Belajar Bahasa Indonesia dengan seru · UPT SDN 160 GRESIK</p>
+      <p class="footer-small">Jika suara tidak tersedia, coba gunakan Google Chrome versi terbaru dan periksa pengaturan suara perangkat.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
